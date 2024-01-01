@@ -1,0 +1,23 @@
+.main form {
+  display: flex;
+  justify-content: space-between;
+}
+.main form .add-task-button {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #00a600;
+  padding: 5px;
+  cursor: pointer;
+}
+.main form .add-task-button:hover {
+  background-color: #008000;
+}
+.main form input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.main .task-list ul {
+  list-style: none;
+}/*# sourceMappingURL=main-styles.css.map */
