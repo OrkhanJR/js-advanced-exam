@@ -1,6 +1,7 @@
 .main form {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 .main form .add-task-button {
   border: none;
@@ -13,11 +14,22 @@
 .main form .add-task-button:hover {
   background-color: #008000;
 }
-.main form input {
+.main form .task-input {
   padding: 5px;
   border-radius: 10px;
   border: 2px solid black;
+  background-color: whitesmoke;
 }
-.main .task-list ul {
+.main form #error {
+  display: none;
+  color: red;
+  font-size: 13px;
+  margin-top: -8px;
+}
+.main .task-list {
+  overflow: auto;
+  padding: 5px;
+}
+.main .task-list .list {
   list-style: none;
 }/*# sourceMappingURL=main-styles.css.map */

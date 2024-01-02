@@ -1,27 +1,41 @@
+$add-task-button-color: #00a600;
+$add-task-button-color-in-hover: #008000;
+
 .main {
+  // overflow: wrap;
   form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
     .add-task-button {
       border: none;
       border-radius: 10px;
       color: white;
-      background-color: #00a600;
+      background-color: $add-task-button-color;
       padding: 5px;
       cursor: pointer;
     }
     .add-task-button:hover {
-      background-color: #008000;
+      background-color: $add-task-button-color-in-hover;
     }
-    input {
+    .task-input {
       padding: 5px;
       border-radius: 10px;
       border: 2px solid black;
+      background-color: whitesmoke;
+    }
+    #error {
+      display: none;
+      color: red;
+      font-size: 13px;
+      margin-top: -8px;
     }
   }
   .task-list {
-    ul {
-        list-style: none;
+    overflow: auto;
+    padding: 5px;
+    .list {
+      list-style: none;
     }
   }
 }

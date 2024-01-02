@@ -12,9 +12,13 @@ body {
   flex-direction: column;
   border: 1px solid white;
   border-radius: 10px;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: whitesmoke;
   box-shadow: -4px 2px 11px 8px rgba(34, 60, 80, 0.2);
   padding: 10px;
+}
+.main li {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=global.css.map */

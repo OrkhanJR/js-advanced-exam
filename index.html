@@ -10,13 +10,23 @@
   <body>
     <div class="main">
       <form>
-        <input type="text" placeholder="add your task" />
+        <input
+          class="task-input"
+          id="task-input"
+          type="text"
+          placeholder="add your task"
+        />
+        <span id="error"></span>
+        <input
+          type="text"
+          class="task-input"
+          id="description-input"
+          placeholder="add description"
+        />
         <button type="submit" class="add-task-button">add task</button>
       </form>
       <div class="task-list">
-        <ul class="list">
-          
-        </ul>
+        <ul class="list"></ul>
       </div>
     </div>
   </body>
