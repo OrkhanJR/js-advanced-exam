@@ -40,11 +40,7 @@ class Task {
 }
 
 class TaskList {
-  #tasks;
-
-  constructor() {
-    this.#tasks = [];
-  }
+  #tasks = [];
 
   addTask(e) {
     e.preventDefault();
@@ -52,7 +48,6 @@ class TaskList {
       errSpan.style.display = "inline";
       errSpan.textContent = "Please add a task";
     } else {
-      const taskId = Math.random().toString(16).slice(2);
       const currentDate = new Date();
 
       const formattedDate = `${currentDate
@@ -71,24 +66,31 @@ class TaskList {
         .toString()
         .padStart(2, "0")}`;
 
-      const newTask = new Task(taskId, input.value, "", formattedDate, false);
-      this.#tasks.push(newTask);
-
-      let li = document.createElement("li");
-      li.innerHTML = `${input.value}`;
+      const li = document.createElement("li");
+      li.textContent = input.value;
       ul.appendChild(li);
       let date = document.createElement("span");
       date.textContent = formattedDate;
       date.style = `
-      font-size: 12px;
-      color: gray;
+        font-size: 12px;
+        color: gray;
       `;
       li.appendChild(date);
-      localStorage.setItem("tasks", JSON.stringify(this.#tasks));
+
       errSpan.style.display = "none";
     }
     input.value = "";
   }
+
+  saveData() {
+    this.#tasks.push(ul.innerHTML);
+    localStorage.setItem("tasks", JSON.stringify(this.#tasks));
+  }
+
+  showData() {
+    ul.innerHTML = JSON.parse(localStorage.getItem("tasks"));
+  }
+
   get tasks() {
     return this.#tasks;
   }
@@ -96,6 +98,12 @@ class TaskList {
 
 const taskList = new TaskList();
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener("click", (e) => {
   taskList.addTask(e);
+  taskList.saveData();
 });
+
+taskList.showData();
+// showData();
+
+localStorage.clear();
