@@ -157,11 +157,6 @@ btn.addEventListener("click", (e) => {
   }
 });
 
-function showData() {
-  ul.innerHTML = JSON.parse(localStorage.getItem("tasks"))
-  
-}
 
-showData()
 
-// localStorage.clear()
+localStorage.clear()
