@@ -2,7 +2,6 @@ $add-task-button-color: #00a600;
 $add-task-button-color-in-hover: #008000;
 
 .main {
-  // overflow: wrap;
   form {
     display: flex;
     flex-direction: column;
@@ -32,11 +31,8 @@ $add-task-button-color-in-hover: #008000;
     }
   }
   .task-list {
-    
+    overflow: auto;
     padding: 5px;
-    .list {
-      list-style: none;
-      overflow: auto;
-    }
+    
   }
 }
