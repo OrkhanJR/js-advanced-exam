@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./index.css" />
     <script defer src="./index.js"></script>
   </head>
   <body>
     <div class="main">
       <form>
+        
         <input
           class="task-input"
           id="task-input"
@@ -24,6 +25,20 @@
           placeholder="add description"
         />
         <button type="submit" class="add-task-button">add task</button>
+        <select id="sort-select">
+          <option value="date">Sort by Date</option>
+          <option value="name">Sort by Name</option>
+        </select>
+        
+        <label>
+          <input type="radio" name="filter" value="all" checked> All
+        </label>
+        <label>
+          <input type="radio" name="filter" value="done"> Done
+        </label>
+        <label>
+          <input type="radio" name="filter" value="undone"> Undone
+        </label>
       </form>
       <div class="task-list">
         <ul class="list"></ul>

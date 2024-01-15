@@ -31,8 +31,56 @@ $add-task-button-color-in-hover: #008000;
     }
   }
   .task-list {
+    margin-top: 20px;
     overflow: auto;
     padding: 5px;
-    
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        .delete {
+          background-color: #ff5555;
+          color: #ffffff;
+          border: 1px solid #ff5555;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .delete:hover {
+          background-color: #ff3333;
+          border: 1px solid #ff3333;
+        }
+
+        .edit {
+          background-color: #4285f4;
+          color: #ffffff;
+          border: 1px solid #4285f4;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-left: 10%;
+        }
+
+        .edit:hover {
+          background-color: #0056b3;
+          border: 1px solid #0056b3;
+        }
+
+        .details {
+          background-color: $add-task-button-color;
+          color: #ffffff;
+          border: 1px solid #00a600;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .details:hover {
+          background-color: $add-task-button-color-in-hover;
+        }
+      }
+    }
   }
 }

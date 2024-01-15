@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/edit.css" />
+    <script defer src="./edit.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <h1>Edit the task</h1>
+        <form id="edit-form">
+          <label for="task-name"
+            >Edit the name of task: <input type="text" id="task-name"
+          /></label>
+
+          <label for="task-description"
+            >Edit the description: <input type="text" id="task-description"
+            
+          /> <p id="errorP" style="display: none; color: red;"></p></label>
+
+          <div class="radioButton">
+            <label>Edit the status:</label>
+            <label
+              >Completed<input type="radio" name="ChangeStatus" id="completed"
+            /></label>
+            <label
+              >Not completed<input
+                type="radio"
+                name="ChangeStatus"
+                id="not-completed"
+            /></label>
+          </div>
+
+          <button id="saveChanges" type="button">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -27,6 +27,48 @@
   margin-top: -8px;
 }
 .main .task-list {
+  margin-top: 20px;
   overflow: auto;
   padding: 5px;
+}
+.main .task-list .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main .task-list .list li .delete {
+  background-color: #ff5555;
+  color: #ffffff;
+  border: 1px solid #ff5555;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.main .task-list .list li .delete:hover {
+  background-color: #ff3333;
+  border: 1px solid #ff3333;
+}
+.main .task-list .list li .edit {
+  background-color: #4285f4;
+  color: #ffffff;
+  border: 1px solid #4285f4;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10%;
+}
+.main .task-list .list li .edit:hover {
+  background-color: #0056b3;
+  border: 1px solid #0056b3;
+}
+.main .task-list .list li .details {
+  background-color: #00a600;
+  color: #ffffff;
+  border: 1px solid #00a600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.main .task-list .list li .details:hover {
+  background-color: #008000;
 }/*# sourceMappingURL=main-styles.css.map */

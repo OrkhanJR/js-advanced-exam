@@ -22,4 +22,5 @@ body {
   display: flex;
   gap: 5px;
   list-style: none;
+  align-items: center;
 }/*# sourceMappingURL=global.css.map */
